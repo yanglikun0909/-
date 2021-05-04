@@ -1,0 +1,49 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+  <view class="wx-canvas">
+     <ec-canvas style=" width: 100%;height: 300rpx;" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ chartBar  }}"></ec-canvas>
+  </view>
+  <view class="bg-img">
+   <image style="height:400rpx" src="{{image}}"></image>
+  </view>
+  <view class="tips-view">
+    今日简报
+  </view>
+  <view class="tips-list">
+    <view>
+      <image style="width:50rpx;height:50rpx;" src="{{image}}"></image>
+      <view>待处理</view>
+    </view>
+    <view>
+      <image style="width:50rpx;height:50rpx;" src="{{image}}"></image>
+      <view>正在处理</view>
+    </view>
+    <view>
+      <image style="width:50rpx;height:50rpx;" src="{{image}}"></image>
+      <view>已处理</view>
+    </view>
+  </view>
+  </view>
+
+  <!-- <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>

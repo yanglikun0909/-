@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mypage/mypage",
+    "pages/transaction-list/transactionList",
+    "pages/works/works",
+    "pages/logs/logs",
+    "pages/message-list/messageList",
+    "pages/find/find"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "智慧园林",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-selected.png"
+      },
+      {
+        "pagePath": "pages/transaction-list/transactionList",
+        "text": "工作",
+        "iconPath": "images/transaction.png",
+        "selectedIconPath": "images/transaction-selected.png"
+      },
+      {
+        "pagePath": "pages/works/works",
+        "text": "任务",
+        "iconPath": "images/works.png",
+        "selectedIconPath": "images/works-selected.png"
+      },
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "images/find.png",
+        "selectedIconPath": "images/find-selected.png"
+      },
+      {
+        "pagePath": "pages/mypage/mypage",
+        "text": "我的",
+        "iconPath": "images/mypage.png",
+        "selectedIconPath": "images/mypage-selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
