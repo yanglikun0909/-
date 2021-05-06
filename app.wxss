@@ -1,6 +1,6 @@
 /**app.wxss**/
 Page{
-  background-color:rgba(238, 238, 238, 0.514);
+  background-color:rgba(238, 238, 238, 0.192);
 }
 .container {
   height: 100%;

@@ -1,0 +1,21 @@
+<!--pages/login/login.wxml-->
+<view>
+  <image class="login-top" src="../../images/login-bg.png">
+  </image>
+ <view class="login-view">
+   <view class="title">
+     <view class="{{type === 'user' ? 'cur' : ''}}" data-type="user" bindtap="changType"> 用户登录 </view>
+     <view>/</view>
+     <view  class="{{type !== 'user' ? 'cur' : ''}}" data-type="youke" bindtap="changType">游客登录</view>
+   </view>
+   <view class="name-and-pwd" wx:if="{{type === 'user'}}">
+     <input class="login-input" type="text" bindinput="inputUser" placeholder="输入账号"  maxlength="20" />
+     <input class="login-input" type="password"  bindinput="inputPwd"  placeholder="输入密码" maxlength="11" />
+   </view>
+   <view class="name-and-pwd" wx:if="{{type !== 'user'}}">
+     <input class="login-input" type="number"  bindinput="inputPhone"  placeholder="输入手机号"  maxlength="11" />
+
+   </view>
+   <view class="login-submit" bindtap="submit">登录</view>
+ </view>
+</view>

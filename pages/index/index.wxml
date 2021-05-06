@@ -1,6 +1,10 @@
 <!--index.wxml-->
   <view class="wx-canvas">
-      <view style="font-size:32rpx;color: #333;">当前温度：{{curDates.tem}}℃    {{curDates.wea}} {{curDates.week}}</view>
+      <view style="font-size:32rpx;color: #333;">
+        <!-- <text style="color:#333;font-size:26rpx;font-weight:600;">当前温度：</text> -->
+        <image class="w-icon" src="{{iconw}}"></image>
+        <text style="color:#23f414;font-size:50rpx;font-weight:600;">{{curDates.tem}}</text>℃    
+        <text style="color:#aaa;font-size:26rpx;font-weight:600;margin-left:20rpx;">{{curDates.wea}}  {{curDates.week}}</text></view>
      <ec-canvas style=" width: 100%;height: 330rpx;" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ chartBar  }}"></ec-canvas>
   </view>
   <view class="tips-trans">
@@ -15,33 +19,54 @@
       <image style="width:80rpx; height:80rpx" mode="cover" src="../../images/completed.png"></image>
       <view class="model-text">已完成</view> </view>
   </view>
-  <view style="font-size: 30rpx;color:#333; font-weight:600;margin: 20rpx 0 20rpx 10rpx;">智慧管理</view>
+  <view class="wx-canvas">
+     <ec-canvas style=" width: 100%;height: 450rpx;" id="mychart-dom-bara" canvas-id="mychart-bara" ec="{{ chartBara  }}"></ec-canvas>
+  </view>
+
+  <view style="font-size: 30rpx;color:#333; font-weight:600;margin: 20rpx 0 20rpx 30rpx;">人力统计</view>
+  <view class="tables">
+    <scroll-view scroll-x="true"  class="rl-table">
+      <text class="rl-table-item">工单类型</text>
+      <text class="rl-table-item">工人分组</text>
+      <text class="rl-table-item">负责人</text>
+      <text class="rl-table-item">用工人数</text>
+      <text class="rl-table-item">用工单价(元/天)</text>
+      <text class="rl-table-item">加班人数</text>
+      <text class="rl-table-item">加班时长</text>
+      <view style="font-size:26rpx;height:80rpx;line-height:80rpx;text-align:center;color:#ccc;">暂无数据</view>
+    </scroll-view>
+  </view>
+  <view style="font-size: 30rpx;color:#333; font-weight:600;margin: 20rpx 0 20rpx 30rpx;">智慧管理</view>
   <view class="other-items">
     <view class="other-models" catchtap="toMapPage">
-      <view class="text">车辆监控</view> 
       <image style="width:80rpx; height:80rpx;margin:20rpx auto;" mode="cover" src="../../images/cars.png"></image> 
+      <view class="text">车辆监控</view> 
     </view>
     <view class="other-models" catchtap="toMapPage">
-      <view class="text">智慧喷灌</view> 
       <image style="width:120rpx; height:120rpx;margin:0 auto;" mode="cover" src="../../images/miao.png"></image> 
+      <view class="text">智慧喷灌</view> 
+
       </view>
       <view class="other-models" catchtap="toMapPage">
-      <view class="text">智慧烟感</view> 
       <image style="width:90rpx; height:90rpx;margin:10rpx auto;" mode="cover" src="../../images/yangan.png"></image> 
+      <view class="text">智慧烟感</view> 
       </view>
   </view>
   <view class="other-items" catchtap="toMapPage">
     <view class="other-models">
-      <view class="text">视频监控</view> 
       <image style="width:80rpx; height:80rpx;margin:20rpx auto;" mode="cover" src="../../images/jiankong.png"></image> 
+      <view class="text">视频监控</view> 
+
       </view>
     <view class="other-models" catchtap="toMapPage">
-      <view class="text">土壤温湿</view> 
       <image style="width:100rpx; height:100rpx;margin:20rpx auto;" mode="cover" src="../../images/wenshi.png"></image> 
+      <view class="text">土壤温湿</view> 
+
       </view>
     <view class="other-models" catchtap="toMapPage">
-      <view class="text">土壤肥力</view> 
       <image style="width:100rpx; height:100rpx;margin:20rpx auto;" mode="cover" src="../../images/feili.png"></image> 
+      <view class="text">土壤肥力</view> 
+
       </view>
   </view>
 <!-- <view class="container">

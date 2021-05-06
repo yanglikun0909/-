@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/login/login",
     "pages/transaction-list/transactionList",
     "pages/transaction-list/info-upload",
     "pages/find/findDetails",
