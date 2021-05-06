@@ -14,23 +14,58 @@ Page({
     chartBar: {//图表柱状图表
       onInit: ''
     },
+    curDates:{},
     chartData:{
       title: { 
-        text: "近7日接诊趋势图：单位(人)",
+        text: '',
         textStyle:{color:'#333',fontWeight:'bold',fontSize:14} 
       },
+    grid:{
+      x:5,
+      y:50,
+      x2:5,
+      y2:80,
+      height:90,
+      borderWidth:10
+     },
       xAxis: {
         type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        show:true,
+        data: [],
+        maxInterval:7,
+        axisLine:{
+          show:true,
+          lineStyle:{
+            color:'#eee'
+          }
+        },
+        axisTick:{
+          show:true,
+          inside:true,
+          length:50,
+          interval:0
+        },
+        nameTextStyle:{
+          color:"red"
+        },
       },
       yAxis: {
-          type: 'value'
+          type: 'value',
+          show:false,
       },
       series: [{
-          data: [120, 200, 150, 80, 70, 110, 130],
-          type: 'bar',
-          color: '#ffc300'
-      }]
+          data: [],
+          type: 'line',
+          smooth:true,
+          color: '#ffc300',
+          itemStyle : { normal: {label : {show: true}}}
+      },{
+        data: [],
+        type: 'line',
+        smooth:true,
+        color: '#40e0d0',
+        itemStyle : { normal: {label : {show: true}}}
+    }]
     }
   },
   // 事件处理函数
@@ -45,7 +80,48 @@ Page({
         canIUseGetUserProfile: true
       })
     }
-    this.getList();
+    // this.getWaters();
+    // 
+  },
+  onShow() {
+    app.globalData.allData.type = 0;
+  },
+  // 
+  getWaters() {
+    const that = this;
+    wx.request({
+      url: 'https://v0.yiketianqi.com/api?version=v9&appid=33955337&appsecret=QHGy6vhk',
+      data: {
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.log(res);
+         const datalist = res.data.data.map((item) =>{
+              return item.date.substr(5,5);
+         })
+         const minList = res.data.data.map((item) =>{
+          return item.tem2;
+        })
+        const maxList = res.data.data.map((item) =>{
+          return item.tem1;
+        })
+        const objs = that.data.chartData;
+        objs.xAxis['data'] = datalist;
+        objs.series[0]['data'] = maxList;
+        objs.series[1]['data'] = minList;
+        that.setData({
+          chartData: objs,
+          curDates: res.data.data[0]
+        },() => {
+         that.getList();
+         console.log(that.data.curDates);
+        })
+         console.log(datalist);
+      }
+    });
   },
   getList(){
     var that = this;
@@ -55,11 +131,12 @@ Page({
     })
   },
    //图表结果
-   initCharts(canvas, width, height) {
+   initCharts(canvas, width, height,dpr) {
     var chartData = this.data.chartData;
     const chart = echarts.init(canvas, null, {
         width: width,
-        height: height
+        height: height,
+        devicePixelRatio: dpr
     });
     canvas.setChart(chart);
     var option=chartData
@@ -86,5 +163,18 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  toMapPage() {
+    wx.navigateTo({
+      url: '/pages/map/map',
+    })
+  },
+  toWorkPage(e) {
+     const type = e.currentTarget.dataset.type; 
+     console.log(type);
+    app.globalData.allData.type = type;
+    wx.switchTab({
+      url: '/pages/works/works?type=0',
+    })
+  },
 })

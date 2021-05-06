@@ -1,2 +1,18 @@
 <!--pages/works/works.wxml-->
-<text>pages/works/works.wxml</text>
+<view class="top-change">
+  <view class="items {{topStates === 0 ? 'cur':''}} " data-type="0" bindtap="changTap"  >全部</view>
+  <view class="items {{topStates === 1 ? 'cur':''}}"  data-type="1" bindtap="changTap" >待处理</view>
+  <view class="items {{topStates === 2 ? 'cur':''}}"  data-type="2" bindtap="changTap">处理中</view>
+  <view class="items {{topStates === 3 ? 'cur':''}}"  data-type="3" bindtap="changTap">已处理</view>
+</view>
+<view class="list-datas">
+  <view class="list-items"   wx:for="{{curList}}" wx:for-index="idx" wx:key="idx" wx:for-item="itemName" >
+     <image class="imgs" src="{{itemName.images}}"></image>
+     <view class="titles-desc">
+       <view class="title">{{itemName.title}}</view> 
+       <view class="desc-times">{{itemName.desc}} {{itemName.time}}</view> 
+       <view class="states" wx:if="{{itemName.state === 1}}" data-index="{{idx}}" catchtap="toDetails" >立即处理</view> 
+       <view class="states states-color" data-index="{{idx}}" bindtap="toDetails" wx:else>查看详情</view> 
+     </view>
+  </view>
+</view>

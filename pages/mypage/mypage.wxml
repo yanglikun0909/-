@@ -1,2 +1,27 @@
 <!--pages/mypage/mypage.wxml-->
-<text>pages/mypage/mypage.wxml</text>
+<view class="user-layout">
+  <view class="user-info">
+   <image style="width:150rpx; height:150rpx" src="../../images/user-base.png"></image>
+  </view>
+  <view class="user-message">
+    <view class="user-name">张工</view>
+    <view class="user-role">自建工人</view>
+  </view>
+</view>
+
+<view class="item-dothing">
+  <button class="item-next" open-type="feedback">
+    <view class="item-next-text">问题反馈</view> 
+    <image class="img" mode="cover" src="../../images/view.png"></image>
+  </button>
+  <view class="line-item-next"></view>
+  <button class="item-next" bindtap="toPassword">
+    <view class="item-next-text">密码修改</view> 
+    <image class="img" mode="cover" src="../../images/view.png"></image>
+  </button>
+  <view class="line-item-next"></view>
+  <button class="item-next"  bindtap="toPersinnel"> 
+     <view class="item-next-text">人员管理</view> 
+    <image class="img" mode="cover" src="../../images/view.png"></image>
+  </button>
+</view>

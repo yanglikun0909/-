@@ -28,6 +28,16 @@ Page({
   onShow: function () {
 
   },
+  toPassword() {
+    wx.navigateTo({
+      url: '/pages/password/password',
+    })
+  },
+  toPersinnel() {
+    wx.navigateTo({
+      url: '/pages/personnel-management/personnel-management',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面隐藏

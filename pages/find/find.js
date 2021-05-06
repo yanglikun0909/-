@@ -28,7 +28,12 @@ Page({
   onShow: function () {
 
   },
-
+  todetails(e) {
+    const type = e.currentTarget.dataset.type; 
+    wx.navigateTo({
+      url: '/pages/find/findDetails?type='+type,
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

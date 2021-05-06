@@ -7,10 +7,10 @@
     "urlCheck": true,
     "es6": true,
     "enhance": false,
-    "postcss": true,
+    "postcss": false,
     "preloadBackgroundData": false,
-    "minified": true,
-    "newFeature": false,
+    "minified": false,
+    "newFeature": true,
     "coverView": true,
     "nodeModules": false,
     "autoAudits": false,
@@ -40,7 +40,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.0.4",
+  "libVersion": "2.10.2",
   "appid": "wx421378d8d82158b6",
   "projectname": "smart-garden",
   "debugOptions": {
@@ -52,6 +52,8 @@
     "servePath": ""
   },
   "isGameTourist": false,
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
       "list": []

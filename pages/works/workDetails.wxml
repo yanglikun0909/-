@@ -1,0 +1,25 @@
+<!--pages/works/workDeile.wxml-->
+<view class="detail-top">
+  <image class="detail-image" src="{{details.images}}" ></image>
+  <view class="detail-title">任务名称:  {{details.title}}</view>
+
+  <view class="detail-adrrass">详细地址: {{details.adrrass}} <image bindtap="toMap" style="width:30rpx;height:30rpx;" src="../../images/adrrass.png"></image></view>
+
+</view>
+
+<view class="detail-connet">
+  <view class="detail-title">详情</view>
+  <view class="detail-desc">任务内容：  {{details.desc}}</view>
+  <view class="detail-time">完成时间：  {{details.time}}</view>
+</view>
+
+<view class="detail-connet" wx:if="{{details.state !== 1}}">
+  <view class="detail-title">责任单位</view>
+  <view class="detail-title">{{details.unit}}</view>
+</view>
+<view class="detail-connet"  wx:if="{{details.state !== 1}}">
+  <view class="detail-title">责任人</view>
+  <view class="detail-title">{{details.personLiable}}</view>
+</view>
+
+ <view class="details-btn" bindtap="upload" wx:if="{{details.state === 1}}">立即处理</view>

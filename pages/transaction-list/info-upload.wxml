@@ -1,0 +1,237 @@
+
+<view class="items-p" wx:if="{{type === 'work'}}">
+<view  class="personnel-items">
+  <view class="personnel-title">日期</view>
+  <view class="personnel-info">{{nowdate}}</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">人员</view>
+  <view class="personnel-info">张工</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">苗木补植数量</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="数量" type="text" /> <span class="upinupt" style="mar">棵</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">浇水量</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="水量" type="text" /> <span class="upinupt" style="mar">吨</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">浇水面积</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="面积" type="text" /> <span class="upinupt" style="mar">亩</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">施肥量</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="数量" type="text" /> <span class="upinupt" style="mar">吨</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">施肥面积</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="面积" type="text" /> <span class="upinupt" style="mar">亩</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+    <view class="personnel-title">图片上传</view>
+    <image class="upinupt-image" bindtap="handleChooseAlbum" src="../../images/tp.png"></image>
+</view>
+<view>
+  <image class="phone-list" wx:for="{{imagePath}}" wx:key="ids" wx:for-item="item" src="{{item}}"></image>
+</view>
+</view>
+
+
+<view class="items-p" wx:if="{{type === 'phone12345' || type === 'phone'}}">
+<view  class="personnel-items">
+  <view class="personnel-title">工单编号</view>
+  <view class="personnel-info">21000021</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">收文编号</view>
+  <view class="personnel-info">2222011</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">姓名</view>
+  <view class="personnel-info">张工</view>
+
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">来件日期</view>
+  <view class="personnel-info">{{nowdate}}</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">受理期限</view>
+  <input class="upinupt" placeholder="天数" type="text" /> <span class="upinupt" style="mar">天</span>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">受理渠道</view>
+    <input class="upinupt" placeholder="渠道" type="text" /> <span class="upinupt" style="mar"></span>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">处理情况</view>
+  <input class="upinupt" placeholder="否" type="text" /> <span class="upinupt" style="mar"></span>
+</view>
+</view>
+
+<view class="items-p" wx:if="{{type === 'wx'}}">
+<view  class="personnel-items">
+  <view class="personnel-title">举报用户</view>
+  <input class="upinupt-more" placeholder="输入名称" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">联系方式</view>
+  <input class="upinupt-more" placeholder="输入联系方式" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">标题</view>
+  <input class="upinupt-more" placeholder="输入标题" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">位置</view>
+  <input class="upinupt-more" placeholder="输入位置" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">回复情况</view>
+  <input class="upinupt-more" placeholder="是否回复" type="text" /> 
+</view>
+</view>
+
+<view class="items-p" wx:if="{{type === 'ping'}}">
+<view  class="personnel-items">
+  <view class="personnel-title">考核时间</view>
+  <input class="upinupt-more" placeholder="考核时间" value="{{nowdate}}" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">考核路段</view>
+  <input class="upinupt-more" placeholder="输入路段" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">存在问题</view>
+</view>
+<textarea class="upinupt-textarea" bindblur="bindTextAreaBlur" auto-height placeholder="请输入问题" />
+<view  class="personnel-items">
+  <view class="personnel-title">责任单位</view>
+  <input class="upinupt-more" placeholder="请输入" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">责任人</view>
+  <input class="upinupt-more" placeholder="请输入" type="text" /> 
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">整改期限</view>
+  <input class="upinupt" placeholder="天数" type="text" /> <span class="upinupt" style="mar">天</span>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">整改情况</view>
+</view>
+<textarea class="upinupt-textarea" auto-height placeholder="输入整改情况" />
+</view>
+
+
+<view class="items-p" wx:if="{{type === 'xun'}}">
+  <view  class="personnel-items">
+  <view class="personnel-title">整改内容</view>
+</view>
+<textarea class="upinupt-textarea" bindblur="bindTextAreaBlur" auto-height placeholder="请输入" />
+<view  class="personnel-items">
+  <view class="personnel-title">截止时间</view>
+  <input class="upinupt-more" placeholder="截止时间" value="{{nowdate}}" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">整改位置</view>
+  <input class="upinupt-more" placeholder="请输入" type="text" />  
+</view>
+ 
+<view  class="personnel-items">
+  <view class="personnel-title">记录人</view>
+  <input class="upinupt-more" placeholder="请输入" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">记录时间</view>
+  <input class="upinupt-more" placeholder="请输入" type="text" /> 
+</view>
+<view  class="personnel-items">
+    <view class="personnel-title">现场图片</view>
+    <image class="upinupt-image" bindtap="handleChooseAlbum" src="../../images/tp.png"></image>
+</view>
+<view>
+  <image class="phone-list" wx:for="{{imagePath}}" wx:key="ids" wx:for-item="item" src="{{item}}"></image>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">整改人</view>
+  <input class="upinupt-more" placeholder="请输入" type="text" />  
+</view>
+<view  class="personnel-items">
+    <view class="personnel-title">整改后图片</view>
+    <image class="upinupt-image" bindtap="handleChooseAlbumss" src="../../images/tp.png"></image>
+</view>
+<view>
+  <image class="phone-list" wx:for="{{imagePathafter}}" wx:key="ids" wx:for-item="item" src="{{item}}"></image>
+</view>
+</view>
+
+
+<view class="items-p" wx:if="{{type === 'data'}}">
+<view  class="personnel-items">
+  <view class="personnel-title">补植面积</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="面积" type="text" /> <span class="upinupt" style="mar">亩</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">地点</view>
+  <input class="upinupt-more" placeholder="请输入" type="text" />  
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">补植人</view>
+  <input class="upinupt-more" placeholder="请输入" type="text" />  
+</view>
+<view  class="personnel-items">
+    <view class="personnel-title">图片上传</view>
+    <image class="upinupt-image" bindtap="handleChooseAlbum" src="../../images/tp.png"></image>
+</view>
+<view>
+  <image class="phone-list" wx:for="{{imagePath}}" wx:key="ids" wx:for-item="item" src="{{item}}"></image>
+</view>
+
+<view  class="personnel-items">
+  <view class="personnel-title">每周苗木补植数量</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="数量" type="text" /> <span class="upinupt" style="mar">棵</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">每周浇水量</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="水量" type="text" /> <span class="upinupt" style="mar">吨</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">每周浇水面积</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="面积" type="text" /> <span class="upinupt" style="mar">亩</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">每周施肥量</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="数量" type="text" /> <span class="upinupt" style="mar">吨</span>
+  <!-- </view> -->
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">每周施肥面积</view>
+  <!-- <view class="personnel-info"> -->
+    <input class="upinupt" placeholder="面积" type="text" /> <span class="upinupt" style="mar">亩</span>
+  <!-- </view> -->
+</view>
+
+</view>
+<view style="height:200rpx"></view>
+<view class="details-btn" bindtap="submit" >提报</view>

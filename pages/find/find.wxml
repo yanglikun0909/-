@@ -1,2 +1,46 @@
-<!--pages/find/find.wxml-->
-<text>pages/find/find.wxml</text>
+<!--pages/transaction-list/transactionList.wxml-->
+<view class="find-list">
+    <view class="find-item">
+        <view class="inter">
+           <view class="texts">数据查询</view>
+           <image class="images" src="../../images/datacheck.png">
+           </image>
+        </view>
+    </view>
+    <view  class="find-item">
+        <view class="inter" data-type="bing" catchtap="todetails">
+           <view class="texts">病害</view>
+           <image class="images" src="../../images/shuye.png">
+           </image>
+        </view>
+    </view>
+    <view class="find-item">  
+        <view class="inter" data-type="chong" catchtap="todetails">
+           <view class="texts">虫害</view>
+           <image class="images" src="../../images/bingchonghai.png">
+           </image>
+        </view>
+    </view>
+    <view class="find-item">
+        <view class="inter">
+           <view class="texts">问答</view>
+           <image class="images" src="../../images/wenda.png">
+           </image>
+        </view>
+    </view>
+    <view class="find-item">
+        <view class="inter">
+           <view class="texts">指导书</view>
+           <image class="images" src="../../images/zhidaoshu.png">
+           </image>
+        </view>
+        
+    </view>
+    <view class="find-item">
+        <view class="inter" data-type="yao"  catchtap="todetails">
+           <view class="texts">药剂库</view>
+           <image class="images" src="../../images/yaojiku.png">
+           </image>
+        </view>
+    </view>
+</view>

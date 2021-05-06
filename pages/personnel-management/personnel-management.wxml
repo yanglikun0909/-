@@ -1,0 +1,54 @@
+<!--pages/personnel-management/personnel-management.wxml-->
+<view class="items-p">
+<view class="personnel-item">
+  <view class="personnel-title">
+    工人照片
+  </view>
+  <image class="personnel-image" src="../../images/user-base.png">
+
+  </image>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">姓名</view>
+  <view class="personnel-info">张工</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">工人分组</view>
+  <view class="personnel-info">自建工人</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">工种</view>
+  <view class="personnel-info">养护</view>
+</view>
+</view>
+
+<view class="items-p">
+<view  class="personnel-items">
+  <view class="personnel-title">性别</view>
+  <view class="personnel-info">男</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">身份证</view>
+  <view class="personnel-info">332***********6658</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">电话号码</view>
+  <view class="personnel-info">135****1112</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">年龄（岁）</view>
+  <view class="personnel-info">56</view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">联系地址</view>
+  <view class="personnel-info"></view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">紧急联系人</view>
+  <view class="personnel-info"></view>
+</view>
+<view  class="personnel-items">
+  <view class="personnel-title">紧急联系人电话</view>
+  <view class="personnel-info"></view>
+</view>
+</view>

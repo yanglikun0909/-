@@ -1,9 +1,53 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="header">
   <view class="wx-canvas">
-     <ec-canvas style=" width: 100%;height: 300rpx;" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ chartBar  }}"></ec-canvas>
+      <view style="font-size:32rpx;color: #333;">当前温度：{{curDates.tem}}℃    {{curDates.wea}} {{curDates.week}}</view>
+     <ec-canvas style=" width: 100%;height: 330rpx;" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ chartBar  }}"></ec-canvas>
   </view>
+  <view class="tips-trans">
+    <view class="models"  data-type='1' catchtap="toWorkPage">
+      <image style="width:80rpx; height:80rpx" mode="cover" src="../../images/pending.png"></image>
+      <view class="model-text">待处理</view> 
+    </view>
+    <view class="models"  data-type='2' catchtap="toWorkPage">
+      <image style="width:100rpx; height:100rpx" mode="cover" src="../../images/process.png"></image>
+      <view class="model-text">处理中</view> </view>
+    <view class="models"  data-type='3' catchtap="toWorkPage">
+      <image style="width:80rpx; height:80rpx" mode="cover" src="../../images/completed.png"></image>
+      <view class="model-text">已完成</view> </view>
+  </view>
+  <view style="font-size: 30rpx;color:#333; font-weight:600;margin: 20rpx 0 20rpx 10rpx;">智慧管理</view>
+  <view class="other-items">
+    <view class="other-models" catchtap="toMapPage">
+      <view class="text">车辆监控</view> 
+      <image style="width:80rpx; height:80rpx;margin:20rpx auto;" mode="cover" src="../../images/cars.png"></image> 
+    </view>
+    <view class="other-models" catchtap="toMapPage">
+      <view class="text">智慧喷灌</view> 
+      <image style="width:120rpx; height:120rpx;margin:0 auto;" mode="cover" src="../../images/miao.png"></image> 
+      </view>
+      <view class="other-models" catchtap="toMapPage">
+      <view class="text">智慧烟感</view> 
+      <image style="width:90rpx; height:90rpx;margin:10rpx auto;" mode="cover" src="../../images/yangan.png"></image> 
+      </view>
+  </view>
+  <view class="other-items" catchtap="toMapPage">
+    <view class="other-models">
+      <view class="text">视频监控</view> 
+      <image style="width:80rpx; height:80rpx;margin:20rpx auto;" mode="cover" src="../../images/jiankong.png"></image> 
+      </view>
+    <view class="other-models" catchtap="toMapPage">
+      <view class="text">土壤温湿</view> 
+      <image style="width:100rpx; height:100rpx;margin:20rpx auto;" mode="cover" src="../../images/wenshi.png"></image> 
+      </view>
+    <view class="other-models" catchtap="toMapPage">
+      <view class="text">土壤肥力</view> 
+      <image style="width:100rpx; height:100rpx;margin:20rpx auto;" mode="cover" src="../../images/feili.png"></image> 
+      </view>
+  </view>
+<!-- <view class="container">
+ 
+  <view class="header">
+  
   <view class="bg-img">
    <image style="height:400rpx" src="{{image}}"></image>
   </view>
@@ -24,7 +68,7 @@
       <view>已处理</view>
     </view>
   </view>
-  </view>
+  </view> -->
 
   <!-- <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
@@ -46,4 +90,4 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view> -->
-</view>
+<!-- </view> -->

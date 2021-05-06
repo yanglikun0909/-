@@ -1,2 +1,70 @@
 <!--pages/transaction-list/transactionList.wxml-->
-<text>pages/transaction-list/transactionList.wxml</text>
+<view class="work-list">
+    <view class="work-item">
+        <view class="inter" data-type="work" catchtap="toInfo">
+           <view class="texts">工作日志</view>
+           <image class="images" src="../../images/gzrz.png">
+           </image>
+        </view>
+    </view>
+    <view  class="work-item">
+        <view class="inter"  data-type="phone12345" catchtap="toInfo">
+           <view class="texts">12345热线</view>
+           <image class="images" src="../../images/rxdh.png">
+           </image>
+        </view>
+    </view>
+    <view class="work-item">  
+        <view class="inter"  data-type="ping" catchtap="toInfo">
+           <view class="texts">城管平台</view>
+           <image class="images" src="../../images/pingtai.png">
+           </image>
+        </view>
+    </view>
+    <view class="work-item">
+        <view class="inter" data-type="xun" catchtap="toInfo">
+           <view class="texts">园林巡查</view>
+           <image class="images" src="../../images/ylxc.png">
+           </image>
+        </view>
+    </view>
+    <view class="work-item">
+        <view class="inter"  data-type="wx" catchtap="toInfo">
+           <view class="texts">微信举报</view>
+           <image class="images" src="../../images/wxjb.png">
+           </image>
+        </view>
+        
+    </view>
+    <view class="work-item">
+        <view class="inter"  data-type="phone" catchtap="toInfo">
+           <view class="texts">园林热线</view>
+           <image class="images" src="../../images/ylrx.png">
+           </image>
+        </view>
+    </view>
+    <view class="work-item">
+        <view class="inter" data-type="data" catchtap="toInfo" >
+           <view class="texts" >数据上报</view>
+           <image class="images" src="../../images/sjsb.png">
+           </image>
+        </view>
+    </view>
+</view>
+
+<view style="font-size:32rpx; color:#333;line-height:60rpx;margin-left:20rpx;">提报记录</view>
+<view class="up-info">
+   <view class="up-times">2021-04-30 10:20:59</view>
+   <view class="up-adrrass">德州市长河公园</view>
+   <view class="up-type">工作日志</view>
+</view>
+<view class="up-info">
+   <view class="up-times">2021-04-22 13:10:39</view>
+   <view class="up-adrrass">德州市董子园风景区</view>
+   <view class="up-type">园林巡查</view>
+</view>
+<view class="up-info">
+   <view class="up-times">2021-04-20 11:21:27</view>
+   <view class="up-adrrass">德州市人民公园</view>
+   <view class="up-type">12345热线</view>
+</view>

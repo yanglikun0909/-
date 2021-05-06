@@ -28,6 +28,12 @@ Page({
   onShow: function () {
 
   },
+  toInfo(e) {
+    const type = e.currentTarget.dataset.type; 
+    wx.navigateTo({
+      url: '/pages/transaction-list/info-upload?type='+ type,
+    })
+  },
 
   /**
    * 生命周期函数--监听页面隐藏
