@@ -1,18 +1,28 @@
-// pages/find/find.js
+// pages/ribao/ribao.js
+import {format} from '../../utils/util'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    dataList:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarTitle({
+      title: "日报"
+    })
+    const arr = [];
+    for(let i=0;i<20;i++) {
+      arr.push(this.getDateList(i));
+    }
+    this.setData({
+      dataList:arr
+    })
   },
 
   /**
@@ -21,23 +31,24 @@ Page({
   onReady: function () {
 
   },
-
+  getDateList(num) {
+     const newDate = new Date();
+     newDate.setDate(newDate.getDate() - num);
+     var s1 = format(newDate,"yyyy-MM-dd");
+     console.log(s1);
+     return s1
+  },
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
 
   },
-  todetails(e) {
-    const type = e.currentTarget.dataset.type; 
-    wx.navigateTo({
-      url: '/pages/find/findDetails?type='+type,
-    })
-  },
-  toWenDa() {
-    wx.navigateTo({
-      url: '/pages/wenda/wenda',
-    })
+  toDetails(e) {
+     const date = e.currentTarget.dataset.date;
+     wx.navigateTo({
+       url: '/pages/ribao/ribao-details?date=' + date,
+     })
   },
   /**
    * 生命周期函数--监听页面隐藏

@@ -8,34 +8,26 @@
      <ec-canvas style=" width: 100%;height: 330rpx;" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ chartBar  }}"></ec-canvas>
   </view>
   <view class="tips-trans">
+   <view class="models"   bindtap="toRiBao" >
+      <image style="width:75rpx; height:75rpx" mode="cover" src="../../images/ribao.png"></image>
+      <view class="model-text">日报</view> 
+    </view>
+      <view class="models"  bindtap="toYueBao" >
+      <image style="width:75rpx; height:75rpx" mode="cover" src="../../images/yuebao.png"></image>
+      <view class="model-text">月报</view> 
+    </view>
     <view class="models"  data-type='1' catchtap="toWorkPage">
-      <image style="width:80rpx; height:80rpx" mode="cover" src="../../images/pending.png"></image>
+      <image style="width:80rpx; height:80rpx" mode="cover" src="../../images/padding.png"></image>
       <view class="model-text">待处理</view> 
     </view>
     <view class="models"  data-type='2' catchtap="toWorkPage">
-      <image style="width:100rpx; height:100rpx" mode="cover" src="../../images/process.png"></image>
+      <image style="width:80rpx; height:80rpx" mode="cover" src="../../images/pending.png"></image>
       <view class="model-text">处理中</view> </view>
     <view class="models"  data-type='3' catchtap="toWorkPage">
-      <image style="width:80rpx; height:80rpx" mode="cover" src="../../images/completed.png"></image>
+      <image style="width:80rpx; height:80rpx" mode="cover" src="../../images/yichuli.png"></image>
       <view class="model-text">已完成</view> </view>
   </view>
-  <view class="wx-canvas">
-     <ec-canvas style=" width: 100%;height: 450rpx;" id="mychart-dom-bara" canvas-id="mychart-bara" ec="{{ chartBara  }}"></ec-canvas>
-  </view>
-
-  <view style="font-size: 30rpx;color:#333; font-weight:600;margin: 20rpx 0 20rpx 30rpx;">人力统计</view>
-  <view class="tables">
-    <scroll-view scroll-x="true"  class="rl-table">
-      <text class="rl-table-item">工单类型</text>
-      <text class="rl-table-item">工人分组</text>
-      <text class="rl-table-item">负责人</text>
-      <text class="rl-table-item">用工人数</text>
-      <text class="rl-table-item">用工单价(元/天)</text>
-      <text class="rl-table-item">加班人数</text>
-      <text class="rl-table-item">加班时长</text>
-      <view style="font-size:26rpx;height:80rpx;line-height:80rpx;text-align:center;color:#ccc;">暂无数据</view>
-    </scroll-view>
-  </view>
+  
   <view style="font-size: 30rpx;color:#333; font-weight:600;margin: 20rpx 0 20rpx 30rpx;">智慧管理</view>
   <view class="other-items">
     <view class="other-models" catchtap="toMapPage">

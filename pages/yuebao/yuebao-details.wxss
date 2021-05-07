@@ -1,0 +1,87 @@
+/* pages/yuebao/yuebao-details.wxss */
+.wx-canvas {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 4%;
+  right: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background:#fff;
+}
+.tops{
+  margin: 20px auto;
+  width: 92%;
+  height: 120rpx;
+  background: #fff;
+  padding: 20rpx 0;
+  border-radius: 12rpx;
+}
+.text{
+  margin-left: 50rpx;
+  font-size: 30rpx;
+  color: #333;
+  line-height: 50rpx;
+
+}
+.xuncha{
+  margin: 20px auto;
+  width: 92%;
+  height: auto;
+  background: #fff;
+  padding: 20rpx 0;
+  border-radius: 12rpx;
+
+}
+.ybitems{
+  width: 90%;
+  margin:0 auto;
+  height: 180rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px rgba(238, 238, 238, 0.5) solid;
+}
+.ybitem{
+  width: 90%;
+  margin:0 auto;
+  height: 180rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ybcur{
+  text-align: center;
+   color:#1296db;
+   font-size: 40rpx;
+   line-height: 80rpx;
+}
+.ybtexts{
+  text-align: center;
+  color:#333;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+.ybconnet{
+  padding: 20rpx 30rpx;
+  border-bottom: 1px rgba(238, 238, 238, 0.5) solid;
+}
+.ybtitles{
+  font-size: 30rpx;
+  color: #333;
+  line-height: 50rpx;
+}
+.yblefttitle {
+  font-size: 26rpx;
+  color: #333;
+  line-height: 40rpx;
+}
+.ybtext{
+  color:#ccc;margin:10rpx 10rpx;
+  display: inline-block;
+}

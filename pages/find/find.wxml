@@ -22,7 +22,7 @@
         </view>
     </view>
     <view class="find-item">
-        <view class="inter">
+        <view class="inter" catchtap="toWenDa">
            <view class="texts">问答</view>
            <image class="images" src="../../images/wenda.png">
            </image>

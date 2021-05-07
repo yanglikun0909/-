@@ -1,18 +1,30 @@
-// pages/find/find.js
+// pages/yuebao/yuebao.js
+import {format} from '../../utils/util'
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    dataList:[],
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarTitle({
+      title: "月报"
+    })
+    const arr = [];
+    for(let i=0;i<20;i++) {
+      arr.push(this.getDateList(i));
+    }
+    this.setData({
+      dataList:arr
+    })
   },
 
   /**
@@ -28,17 +40,20 @@ Page({
   onShow: function () {
 
   },
-  todetails(e) {
-    const type = e.currentTarget.dataset.type; 
-    wx.navigateTo({
-      url: '/pages/find/findDetails?type='+type,
-    })
-  },
-  toWenDa() {
-    wx.navigateTo({
-      url: '/pages/wenda/wenda',
-    })
-  },
+  getDateList(num) {
+    const newDate = new Date();
+    newDate.setMonth(newDate.getMonth() - num);
+    var s1 = format(newDate,"yyyy-MM-dd");
+    console.log(s1);
+    return s1.substr(0,7)
+ },
+ toDetails(e) {
+  const date = e.currentTarget.dataset.date;
+  wx.navigateTo({
+    url: '/pages/yuebao/yuebao-details?date=' + date,
+  })
+},
+
   /**
    * 生命周期函数--监听页面隐藏
    */

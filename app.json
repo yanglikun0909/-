@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/login/login",
+    "pages/ribao/ribao",
+    "pages/index/index",
     "pages/transaction-list/transactionList",
     "pages/transaction-list/info-upload",
     "pages/find/findDetails",
@@ -13,7 +14,11 @@
     "pages/logs/logs",
     "pages/message-list/messageList",
     "pages/password/password",
-    "pages/works/workDetails"
+    "pages/works/workDetails",
+    "pages/ribao/ribao-details",
+    "pages/yuebao/yuebao",
+    "pages/wenda/wenda",
+    "pages/yuebao/yuebao-details"
   ],
   "permission": {
     "scope.userLocation": {

@@ -1,0 +1,32 @@
+<!--pages/yuebao/yuebao-details.wxml-->
+<view class="tops">
+  <view class="text">项目经理: 张工</view>
+  <view class="text">{{datetext}} 工作月报</view>
+</view>
+
+<view class="xuncha"> 
+  <view class="ybitems">
+      <view class="ybitem">
+        <view class="ybcur" > 0</view>
+        <view class="ybtexts">巡查次数</view>
+      </view>
+       <view class="ybitem">
+        <view class="ybcur" > 0</view>
+        <view class="ybtexts">发现问题</view>
+      </view>
+       <view class="ybitem">
+        <view class="ybcur" > 0</view>
+        <view class="ybtexts">扣除分值</view>
+      </view>
+  </view>
+   <view class="ybconnet">
+      <view class="ybtitles">问题整改情况</view>
+       <view class="yblefttitle">未整改<text class="ybtext" >|</text> <text style="color:#333;">0</text></view>
+       <view class="yblefttitle">待审核<text class="ybtext">|</text> <text style="color:#333;">0</text></view>
+       <view class="yblefttitle">待返工<text class="ybtext">|</text> <text style="color:#333;">0</text></view>
+       <view class="yblefttitle">已整改<text class="ybtext">|</text> <text style="color:#333;">0</text></view>
+   </view>
+   <view class="wx-canvas">
+     <ec-canvas style=" width: 100%;height: 450rpx;" id="mychart-dom-bara" canvas-id="mychart-bara" ec="{{ chartBara  }}"></ec-canvas>
+  </view>
+</view>

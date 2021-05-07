@@ -1,0 +1,24 @@
+<!--pages/wenda/wenda.wxml-->
+<view class="wenda-items" wx:for="{{datalist}}" wx:key="index" wx:for-item="item">
+  <view class="wenda-header">
+   <view class="wenda-title">
+  {{item.title}}
+  </view>
+  <view class="wenda-desc">
+   {{item.desc}}
+  </view>
+  </view>
+  <view class="wenda-foots">
+    <view class="wenda-time">
+      {{item.time}}
+    </view>
+    <view class="wenda-right">
+      <view class="wenda-ans">
+        回答   {{item.ans}}
+      </view>
+      <view class="wenda-look">
+        浏览   {{item.look}}
+      </view>
+    </view>
+  </view>
+</view>

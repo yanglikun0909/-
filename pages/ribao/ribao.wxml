@@ -1,0 +1,13 @@
+<!--pages/ribao/ribao.wxml-->
+<view class="ri-items" bindtap="toDetails" data-date="{{item}}" wx:for-index="idx" wx:for="{{dataList}}" wx:key="idx" wx:for-item="item">
+ <view class="icons">
+   <image class="imgs" src='../../images/ribao.png' ></image>
+ </view>
+ <view class="content">
+    <view class="title">工作日报</view>
+    <view class="date-time">{{item}}</view>
+ </view>
+ <view class="rights">
+  <image class="right-jiantou" src="../../images/right-jiantou.png"></image>
+ </view>
+</view>
